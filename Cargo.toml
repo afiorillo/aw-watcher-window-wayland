@@ -24,6 +24,7 @@ gethostname = "0.2"
 getopts = "0.2"
 
 aw-client-rust = { git = "https://github.com/ActivityWatch/aw-server-rust.git" }
+tokio = {version = "1.39.3", features = ["macros", "rt-multi-thread"]}
 
 [profile.release]
 opt-level = 3

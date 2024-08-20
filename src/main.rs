@@ -62,7 +62,8 @@ const TIMER: Token = Token(1);
 static HEARTBEAT_INTERVAL_MS: u32 = 5000;
 static HEARTBEAT_INTERVAL_MARGIN_S: f64 = (HEARTBEAT_INTERVAL_MS + 1000) as f64 / 1000.0;
 
-fn main() {
+#[tokio::main]
+async fn main() {
     let args: Vec<String> = env::args().collect();
     let program = args[0].clone();
     let mut opts = getopts::Options::new();
